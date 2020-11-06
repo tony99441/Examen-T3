@@ -1,0 +1,25 @@
+﻿@{ ViewData["Title"] = "Index"; }
+<h1><strong>@ViewBag.Mensaje </strong></h1>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>Nombre</th>
+            <th>Video</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+    <tr>
+
+        <td>@item.Nombre</td>
+        <td>
+            <iframe width="560" height="315" src=@item.Link frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </td>
+    </tr>}
+
+    </tbody>
+</table>

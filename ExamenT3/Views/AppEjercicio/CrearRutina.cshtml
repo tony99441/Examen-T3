@@ -1,0 +1,15 @@
+﻿@{ ViewData["Title"] = "Crear"; }
+
+<h1>Crear Rutina</h1>
+<form action="/AppEjercicio/GuardarRutina" method="post">
+    <label>Nombre de la Rutina</label>
+    <input name="Nombre" />
+    <label>Dificultad</label>
+    <select name="Dificultad">
+        <option name="">--Elija la dificultad--</option>
+        @foreach (var item in ViewBag.Dificultades)
+        {
+<option value="@item"> @item</option>}
+    </select>
+    <button>Guardar</button>
+</form>
